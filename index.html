@@ -60,6 +60,55 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2019/02/27/初学Java(一）Java开发环境的搭建/">
+  <time datetime="2019-02-27T13:06:21.421Z">
+    2019-02-27
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2019/02/27/初学Java(一）Java开发环境的搭建/"></a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>学习Java，如果用户采用记事本、UltraEdit等文字处理软件书写Java源文件，则需下载JDK来编译执行Java源文件。<br>具体步骤：</p>
+<ol>
+<li>下载JDK开发工具包<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">JAVA SE（标准版，开发部署在桌面及服务器上的应用程序）</a></li>
+<li><p><img src="https://img-blog.csdnimg.cn/20190227202922906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NhcmVfd2l0aA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">注意要同意许可协议。</p>
+</li>
+<li><p>下载完成后双击启动安装程序，一路直接下一步，但要注意选择并记住安装位置。<img src="https://img-blog.csdnimg.cn/20190227203017218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NhcmVfd2l0aA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">注：每个人的安装位置可不同。</p>
+</li>
+<li>接下来是设置环境变量Path(以win10和JDK1.8为例)</li>
+<li>右键打开此电脑的属性，选择左侧控制面板页面的的高级系统设置，点击右下角的环境变量，找到<strong>下方系统变量</strong>的Path，点击编辑，在编辑环境变量页面选择新建，输入JDK所在路经的bin文件夹，如图（小编将JDK放在了C盘的C:\Program Files下）<img src="https://img-blog.csdnimg.cn/20190227203910958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NhcmVfd2l0aA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li><p>JDK1.8的环境配置还没结束，我们还有再新建一个环境变量Classpath并设置其值：（别忘了最上面的【.】），        在新建时输入【.;C:\Program Files\Java\jdk1.8.0_05\lib\tools.jar;E:\Program Files\Java\jdk1.6.0_05\jre\li\dt.jar】<br>【注意开头是句号加分号】（“;”分号主要用于分隔不同文件）<img src="https://img-blog.csdnimg.cn/20190227205117869.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NhcmVfd2l0aA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li><p>最后是验证验证JDK是否安装好：<br>在命令窗口输入java -version<img src="https://img-blog.csdnimg.cn/20190227205522683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NhcmVfd2l0aA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li>如果出现版本号，就说明环境配置成功，反之，则说明配置失败，要重新检查每一步配置步骤是否有误。</li>
+</ol>
+<p>以上就是Java开发环境的配置过程，如有错漏，请私信小编指出，小编也是初学者，望能与诸位共勉。</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2019/02/19/python爬虫  爬取静态网页/">
   <time datetime="2019-02-19T14:32:24.763Z">
     2019-02-19
