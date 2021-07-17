@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="HTML5一、新的语义/结构元素   标签 描述      定义文档内的文章。    定义页面内容之外的内容。    定义与其他文本不同的文本方向。    定义用户可查看或隐藏的额外细节。    定义对话框或窗口。    定义  元素的标题。    定义自包含内容，比如图示、图表、照片、代码清单等等。    定义文档或节的页脚。    定义文档或节的页眉。    定义文档的主内容。    定义重要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5和CSS3学习">
+<meta property="og:url" content="http://yoursite.com/2021/07/17/HTML5和CSS3学习/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML5一、新的语义/结构元素   标签 描述      定义文档内的文章。    定义页面内容之外的内容。    定义与其他文本不同的文本方向。    定义用户可查看或隐藏的额外细节。    定义对话框或窗口。    定义  元素的标题。    定义自包含内容，比如图示、图表、照片、代码清单等等。    定义文档或节的页脚。    定义文档或节的页眉。    定义文档的主内容。    定义重要">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-07-17T08:07:50.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5和CSS3学习">
+<meta name="twitter:description" content="HTML5一、新的语义/结构元素   标签 描述      定义文档内的文章。    定义页面内容之外的内容。    定义与其他文本不同的文本方向。    定义用户可查看或隐藏的额外细节。    定义对话框或窗口。    定义  元素的标题。    定义自包含内容，比如图示、图表、照片、代码清单等等。    定义文档或节的页脚。    定义文档或节的页眉。    定义文档的主内容。    定义重要">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2021/07/17/HTML5和CSS3学习/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTML5和CSS3学习 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/07/17/HTML5和CSS3学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5和CSS3学习
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2021-07-17 16:07:24 / Modified: 16:07:50" itemprop="dateCreated datePublished" datetime="2021-07-17T16:07:24+08:00">2021-07-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="一、新的语义-结构元素"><a href="#一、新的语义-结构元素" class="headerlink" title="一、新的语义/结构元素"></a>一、新的语义/结构元素</h2><table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><article></article></td>
+<td>定义文档内的文章。</td>
+</tr>
+<tr>
+<td><aside></aside></td>
+<td>定义页面内容之外的内容。</td>
+</tr>
+<tr>
+<td><bdi></bdi></td>
+<td>定义与其他文本不同的文本方向。</td>
+</tr>
+<tr>
+<td><details></details></td>
+<td>定义用户可查看或隐藏的额外细节。</td>
+</tr>
+<tr>
+<td><dialog></dialog></td>
+<td>定义对话框或窗口。</td>
+</tr>
+<tr>
+<td><figcaption></figcaption></td>
+<td>定义 <figure> 元素的标题。</figure></td>
+</tr>
+<tr>
+<td><figure></figure></td>
+<td>定义自包含内容，比如图示、图表、照片、代码清单等等。</td>
+</tr>
+<tr>
+<td><footer></footer></td>
+<td>定义文档或节的页脚。</td>
+</tr>
+<tr>
+<td><header></header></td>
+<td>定义文档或节的页眉。</td>
+</tr>
+<tr>
+<td><main></main></td>
+<td>定义文档的主内容。</td>
+</tr>
+<tr>
+<td><mark></mark></td>
+<td>定义重要或强调的内容。</td>
+</tr>
+<tr>
+<td><menuitem></menuitem></td>
+<td>定义用户能够从弹出菜单调用的命令/菜单项目。</td>
+</tr>
+<tr>
+<td><meter></meter></td>
+<td>定义已知范围（尺度）内的标量测量。</td>
+</tr>
+<tr>
+<td><nav></nav></td>
+<td>定义文档内的导航链接。</td>
+</tr>
+<tr>
+<td><progress></progress></td>
+<td>定义任务进度。</td>
+</tr>
+<tr>
+<td><rp></rp></td>
+<td>定义在不支持 ruby 注释的浏览器中显示什么。</td>
+</tr>
+<tr>
+<td><rt></rt></td>
+<td>定义关于字符的解释/发音（用于东亚字体）。</td>
+</tr>
+<tr>
+<td><ruby></ruby></td>
+<td>定义 ruby 注释（用于东亚字体）。</td>
+</tr>
+<tr>
+<td><section></section></td>
+<td>定义文档中的节。</td>
+</tr>
+<tr>
+<td><summary></summary></td>
+<td>定义 <details> 元素的可见标题。</details></td>
+</tr>
+<tr>
+<td><time></time></td>
+<td>定义日期/时间。</td>
+</tr>
+<tr>
+<td><wbr></td>
+<td>定义可能的折行（line-break）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二、新的表单元素"><a href="#二、新的表单元素" class="headerlink" title="二、新的表单元素"></a>二、新的表单元素</h2><table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><datalist></datalist></td>
+<td>定义输入控件的预定义选项。</td>
+</tr>
+<tr>
+<td><keygen></td>
+<td>定义键对生成器字段（用于表单）。</td>
+</tr>
+<tr>
+<td><output></output></td>
+<td>定义计算结果。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三、input"><a href="#三、input" class="headerlink" title="三、input"></a>三、input</h2><table>
+<thead>
+<tr>
+<th>新的输入类型</th>
+<th>新的输入属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color <br>date <br>datetime <br>datetime-local <br>email <br>month<br>number <br>range <br>search<br>tel<br>time <br>url <br>week</td>
+<td>autocomplete     历史输入<br>autofocus     自动聚焦<br>form<br>formaction<br>formenctype<br>formmethod<br>formnovalidate<br>formtarget<br>height 和 width <br>list<br>min 和 max<br>multiple    多选文件提交<br>pattern (regexp) <br>placeholder    提示文本<br>required     内容不能为空<br>step</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empty</td>
+<td><input type="text" value="John Doe" disabled></td>
+</tr>
+<tr>
+<td>Unquoted</td>
+<td><input type="text" value="John"></td>
+</tr>
+<tr>
+<td>Double-quoted</td>
+<td><input type="text" value="John Doe"></td>
+</tr>
+<tr>
+<td>Single-quoted</td>
+<td><input type="text" value="John Doe"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="四、图象"><a href="#四、图象" class="headerlink" title="四、图象"></a>四、图象</h2><table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><canvas></canvas></td>
+<td>定义使用 JavaScript 的图像绘制。</td>
+</tr>
+<tr>
+<td><svg/></td>
+<td>定义使用 SVG 的图像绘制。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="五、多媒体标签"><a href="#五、多媒体标签" class="headerlink" title="五、多媒体标签"></a>五、多媒体标签</h2><table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><audio></audio></td>
+<td>定义声音或音乐内容。</td>
+</tr>
+<tr>
+<td><embed></td>
+<td>定义外部应用程序的容器（比如插件）。</td>
+</tr>
+<tr>
+<td><source></td>
+<td>定义 <video> 和 <audio> 的来源。</audio></video></td>
+</tr>
+<tr>
+<td><track></td>
+<td>定义 <video> 和 <audio> 的轨道。</audio></video></td>
+</tr>
+<tr>
+<td><video></video></td>
+<td>定义视频或影片内容。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio&gt;</span><br><span class="line">        &lt;source src=&quot;路径&quot; type=&quot;音频格式&quot;&gt;</span><br><span class="line">        &lt;source src=&quot;路径&quot; type=&quot;音频格式&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+<p>​                                                        audio常见属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[autoplay]</td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td>[controls]</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td>[loop]</td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放。</td>
+</tr>
+<tr>
+<td>[muted]</td>
+<td>muted</td>
+<td>规定视频输出应该被静音。</td>
+</tr>
+<tr>
+<td>[preload]</td>
+<td>preload</td>
+<td>如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td>[src]</td>
+<td><em>url</em></td>
+<td>要播放的音频的 URL。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h1><h2 id="一、选择器"><a href="#一、选择器" class="headerlink" title="一、选择器"></a>一、选择器</h2><p>1.属性选择器    元素[attribute]</p>
+<p>​    [attribute] 选择器用于选取带有指定属性的元素。</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>例子描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[<em>attribute</em>]]</td>
+<td>[target]</td>
+<td>选择带有 target 属性的所有元素。</td>
+</tr>
+<tr>
+<td>[[<em>attribute</em>=<em>value</em>]]</td>
+<td>[target=_blank]</td>
+<td>选择带有 target=”_blank” 属性的所有元素。</td>
+</tr>
+<tr>
+<td>[[<em>attribute</em>~=<em>value</em>]]</td>
+<td>[title~=flower]</td>
+<td>选择带有包含 “flower” 一词的 title 属性的所有元素。</td>
+</tr>
+<tr>
+<td>[[<em>attribute</em>\</td>
+<td>=<em>value</em>]]</td>
+<td>[lang\</td>
+<td>=en]</td>
+<td>选择带有以 “en” 开头的 lang 属性的所有元素。</td>
+</tr>
+<tr>
+<td>[[<em>attribute</em>^=<em>value</em>]]</td>
+<td>a[href^=”https”]</td>
+<td>选择其 href 属性值以 “https” 开头的每个 <a> 元素。</a></td>
+</tr>
+<tr>
+<td>[[<em>attribute</em>$=<em>value</em>]]</td>
+<td>a[href$=”.pdf”]</td>
+<td>选择其 href 属性值以 “.pdf” 结尾的每个 <a> 元素。</a></td>
+</tr>
+<tr>
+<td>[[<em>attribute**=</em>value*]]</td>
+<td>a[href*=”w3school”]</td>
+<td>选择其 href 属性值包含子串 “w3school” 的每个 <a> 元素。</a></td>
+</tr>
+</tbody>
+</table>
+<p>2.结构伪类选择器</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>例子描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[:active]</td>
+<td>a:active</td>
+<td>选择活动的链接。</td>
+</tr>
+<tr>
+<td>[:checked]</td>
+<td>input:checked</td>
+<td>选择每个被选中的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:disabled]</td>
+<td>input:disabled</td>
+<td>选择每个被禁用的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:empty]</td>
+<td>p:empty</td>
+<td>选择没有子元素的每个 <p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:enabled]</td>
+<td>input:enabled</td>
+<td>选择每个已启用的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:first-child]</td>
+<td>p:first-child</td>
+<td>选择作为其父的首个子元素的每个 <p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:first-of-type]</td>
+<td>p:first-of-type</td>
+<td>选择作为其父的首个 <p> 元素的每个 </p><p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:focus]</td>
+<td>input:focus</td>
+<td>选择获得焦点的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:hover]</td>
+<td>a:hover</td>
+<td>选择鼠标悬停其上的链接。</td>
+</tr>
+<tr>
+<td>[:in-range]</td>
+<td>input:in-range</td>
+<td>选择具有指定范围内的值的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:invalid]</td>
+<td>input:invalid</td>
+<td>选择所有具有无效值的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:lang(<em>language</em>)]</td>
+<td>p:lang(it)</td>
+<td>选择每个 lang 属性值以 “it” 开头的 <p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:last-child]</td>
+<td>p:last-child</td>
+<td>选择作为其父的最后一个子元素的每个 <p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:last-of-type]</td>
+<td>p:last-of-type</td>
+<td>选择作为其父的最后一个 <p> 元素的每个 </p><p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:link]</td>
+<td>a:link</td>
+<td>选择所有未被访问的链接。</td>
+</tr>
+<tr>
+<td>[:not(<em>selector</em>)]</td>
+<td>:not(p)</td>
+<td>选择每个非 <p> 元素的元素。</p></td>
+</tr>
+<tr>
+<td>[:nth-child(<em>n</em>)]</td>
+<td>p:nth-child(2)</td>
+<td>选择作为其父的第二个子元素的每个 <p> 元素。n可以是关键字、公式（从0开始计算）</p></td>
+</tr>
+<tr>
+<td>[:nth-last-child(<em>n</em>)]</td>
+<td>p:nth-last-child(2)</td>
+<td>选择作为父的第二个子元素的每个<p>元素，从最后一个子元素计数。</p></td>
+</tr>
+<tr>
+<td>[:nth-last-of-type(<em>n</em>)]</td>
+<td>p:nth-last-of-type(2)</td>
+<td>选择作为父的第二个<p>元素的每个</p><p>元素，从最后一个子元素计数</p></td>
+</tr>
+<tr>
+<td>[:nth-of-type(<em>n</em>)]</td>
+<td>p:nth-of-type(2)</td>
+<td>选择作为其父的第二个 <p> 元素的每个 </p><p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:only-of-type]</td>
+<td>p:only-of-type</td>
+<td>选择作为其父的唯一 <p> 元素的每个 </p><p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:only-child]</td>
+<td>p:only-child</td>
+<td>选择作为其父的唯一子元素的 <p> 元素。</p></td>
+</tr>
+<tr>
+<td>[:optional]</td>
+<td>input:optional</td>
+<td>选择不带 “required” 属性的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:out-of-range]</td>
+<td>input:out-of-range</td>
+<td>选择值在指定范围之外的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:read-only]</td>
+<td>input:read-only</td>
+<td>选择指定了 “readonly” 属性的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:read-write]</td>
+<td>input:read-write</td>
+<td>选择不带 “readonly” 属性的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:required]</td>
+<td>input:required</td>
+<td>选择指定了 “required” 属性的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:root]</td>
+<td>root</td>
+<td>选择元素的根元素。</td>
+</tr>
+<tr>
+<td>[:target]</td>
+<td>#news:target</td>
+<td>选择当前活动的 #news 元素（单击包含该锚名称的 URL）。</td>
+</tr>
+<tr>
+<td>[:valid]</td>
+<td>input:valid</td>
+<td>选择所有具有有效值的 <input> 元素。</td>
+</tr>
+<tr>
+<td>[:visited]</td>
+<td>a:visited</td>
+<td>选择所有已访问的链接。</td>
+</tr>
+</tbody>
+</table>
+<p>3.伪元素选择器（dom中看不见创建的元素）</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>例子描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[::after]</td>
+<td>p::after</td>
+<td>在每个 <p> 元素之后插入内容。</p></td>
+</tr>
+<tr>
+<td>[::before]</td>
+<td>p::before</td>
+<td>在每个 <p> 元素之前插入内容。</p></td>
+</tr>
+<tr>
+<td>[::first-letter]</td>
+<td>p::first-letter</td>
+<td>选择每个 <p> 元素的首字母。</p></td>
+</tr>
+<tr>
+<td>[::first-line]</td>
+<td>p::first-line</td>
+<td>选择每个 <p> 元素的首行。</p></td>
+</tr>
+<tr>
+<td>[::selection]</td>
+<td>p::selection</td>
+<td>选择用户选择的元素部分。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>标签选择器、伪元素（两个:: ，用于设置元素指定部分的样式）选择器，权重为1</strong></p>
+<p><strong>类选择器、属性选择器、伪类（一个: ，用于定义元素的特殊状态）选择器，权重为10</strong></p>
+<p><strong>ID选择器，权重为100</strong></p>
+<p><strong>内联样式，权重为1000</strong></p>
+<p><strong>!important 权重最高</strong></p>
+<h2 id="二、2D转换"><a href="#二、2D转换" class="headerlink" title="二、2D转换"></a>二、2D转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">标签 &#123;</span><br><span class="line">  transform: 属性（值）;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​                                        2D转换方法（最大优点：不会影响其他盒子的位置）</p>
+<p>左上角为（0，0）</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matrix(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td>定义 2D 转换，使用六个值的矩阵。</td>
+</tr>
+<tr>
+<td>translate(<em>x</em>,<em>y</em>)</td>
+<td>定义 2D 转换，沿着 X 和 Y 轴移动元素。</td>
+</tr>
+<tr>
+<td>translateX(<em>n</em>)</td>
+<td>定义 2D 转换，沿着 X 轴移动元素。</td>
+</tr>
+<tr>
+<td>translateY(<em>n</em>)</td>
+<td>定义 2D 转换，沿着 Y 轴移动元素。</td>
+</tr>
+<tr>
+<td>scale(<em>x</em>,<em>y</em>)</td>
+<td>定义 2D 缩放转换，改变元素的宽度和高度。(x,y为倍数，若只有一个参数，则默认等比例缩放)</td>
+</tr>
+<tr>
+<td>scaleX(<em>n</em>)</td>
+<td>定义 2D 缩放转换，改变元素的宽度。</td>
+</tr>
+<tr>
+<td>scaleY(<em>n</em>)</td>
+<td>定义 2D 缩放转换，改变元素的高度。</td>
+</tr>
+<tr>
+<td>rotate(<em>angle</em>)</td>
+<td>定义 2D 旋转，在参数中规定角度。单位为deg(正数为顺时针，负数为逆时针)</td>
+</tr>
+<tr>
+<td>skew(<em>x-angle</em>,<em>y-angle</em>)</td>
+<td>定义 2D 倾斜转换，沿着 X 和 Y 轴。</td>
+</tr>
+<tr>
+<td>skewX(<em>angle</em>)</td>
+<td>定义 2D 倾斜转换，沿着 X 轴。</td>
+</tr>
+<tr>
+<td>skewY(<em>angle</em>)</td>
+<td>定义 2D 倾斜转换，沿着 Y 轴。</td>
+</tr>
+</tbody>
+</table>
+<p>如果参数为百分比，则移动的距离为盒子的宽/高*百分比</p>
+<p>盒子居中：定位，top:50%，left:50%，transform:translate(-50%,-50%)</p>
+<p><em>2D转换中心点：</em></p>
+<p><code>transform-origin:x y</code>;</p>
+<p>x y默认为中心点(50%，50%)，也可以设置像素或者方位名词（top bottom left right center）</p>
+<p><strong>transform:translate() rotate() scale()…</strong></p>
+<p><strong>综合使用，同时有位移和其他属性时，要将位移放到最前面</strong></p>
+<h2 id="三、动画"><a href="#三、动画" class="headerlink" title="三、动画"></a>三、动画</h2><p>​                                                    CSS动画属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[@keyframes]</td>
+<td>规定动画模式。</td>
+</tr>
+<tr>
+<td>[animation]</td>
+<td>设置所有动画属性的简写属性。</td>
+</tr>
+<tr>
+<td>[animation-delay]</td>
+<td>规定动画开始的延迟。</td>
+</tr>
+<tr>
+<td>[animation-direction]</td>
+<td>定动画是向前播放、向后播放还是交替播放。（正、反方向播放）</td>
+</tr>
+<tr>
+<td>[animation-duration]</td>
+<td>规定动画完成一个周期应花费的时间。（必须的）</td>
+</tr>
+<tr>
+<td>[animation-fill-mode]</td>
+<td>规定元素在不播放动画时的样式（在开始前、结束后，或两者同时）。（播放结束后状态）</td>
+</tr>
+<tr>
+<td>[animation-iteration-count]</td>
+<td>规定动画应播放的次数。</td>
+</tr>
+<tr>
+<td>[animation-name]</td>
+<td>规定 @keyframes 动画的名称。（必须的）</td>
+</tr>
+<tr>
+<td>[animation-play-state]</td>
+<td>规定动画是运行还是暂停。</td>
+</tr>
+<tr>
+<td>[animation-timing-function]</td>
+<td>规定动画的速度曲线。</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/* 动画代码 */</span><br><span class="line">@keyframes example &#123;</span><br><span class="line">  0%   &#123;background-color: red;&#125;</span><br><span class="line">  25%  &#123;background-color: yellow;&#125;</span><br><span class="line">  50%  &#123;background-color: blue;&#125;</span><br><span class="line">  100% &#123;background-color: green;&#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 也可以用关键词from和to，等同于0%和100% */</span><br><span class="line">/* 应用动画的元素 */</span><br><span class="line">div &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background-color: red;</span><br><span class="line">  animation-name: example;	 /*应用动画效果*/</span><br><span class="line">  animation-duration: 4s;    /*完成时间*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>动画简写属性：</strong></p>
+<p><strong>animation:动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 动画起始或结束的状态</strong>，但 不包含animation-play-state 属性，这个属性用于规定动画是正在运行还是暂停，这个属性常与事件搭配使用</p>
+<h2 id="四、3D转换"><a href="#四、3D转换" class="headerlink" title="四、3D转换"></a>四、3D转换</h2><p>3D特点：进大远小，物体可以被遮挡</p>
+<p>x轴：水平向右（正值）</p>
+<p>y轴：垂直向下（正值）</p>
+<p>z轴：垂直屏幕向外（正值）</p>
+<p>​                                                常见3D转换属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[transform]</td>
+<td>向元素应用 2D 或 3D 转换。</td>
+</tr>
+<tr>
+<td>[transform-origin]</td>
+<td>允许你改变被转换元素的位置。</td>
+</tr>
+<tr>
+<td>[transform-style]</td>
+<td>规定被嵌套元素如何在 3D 空间中显示。</td>
+</tr>
+<tr>
+<td>[perspective]</td>
+<td>规定 3D 元素的透视效果。</td>
+</tr>
+<tr>
+<td>[perspective-origin]</td>
+<td>规定 3D 元素的底部位置。</td>
+</tr>
+<tr>
+<td>[backface-visibility]</td>
+<td>定义元素在不面对屏幕时是否可见。</td>
+</tr>
+</tbody>
+</table>
+<p>​                            3D转换方法（x,y,z不能省略，若没有就写0）</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matrix3d(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>, <em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+<tr>
+<td>translate3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td>定义 3D 转化（位移）。</td>
+</tr>
+<tr>
+<td>translateX(<em>x</em>)</td>
+<td>定义 3D 转化，仅使用用于 X 轴的值。</td>
+</tr>
+<tr>
+<td>translateY(<em>y</em>)</td>
+<td>定义 3D 转化，仅使用用于 Y 轴的值。</td>
+</tr>
+<tr>
+<td>translateZ(<em>z</em>)</td>
+<td>定义 3D 转化，仅使用用于 Z 轴的值。</td>
+</tr>
+<tr>
+<td>scale3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td>定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td>scaleX(<em>x</em>)</td>
+<td>定义 3D 缩放转换，通过给定一个 X 轴的值。</td>
+</tr>
+<tr>
+<td>scaleY(<em>y</em>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+</tr>
+<tr>
+<td>scaleZ(<em>z</em>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+</tr>
+<tr>
+<td>rotate3d(<em>x</em>,<em>y</em>,<em>z</em>,<em>angle</em>)</td>
+<td>定义 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateX(<em>angle</em>)</td>
+<td>定义沿 X 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateY(<em>angle</em>)</td>
+<td>定义沿 Y 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateZ(<em>angle</em>)</td>
+<td>定义沿 Z 轴的 3D 旋转。（一般用px单位）</td>
+</tr>
+<tr>
+<td>perspective(<em>n</em>)</td>
+<td>定义 3D 转换元素的透视(视距)视图。（必须的）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：</strong></p>
+<p><strong>透视perspective(<em>n</em>)必须写再被观察元素的父盒子上面，n 为用户眼睛到屏幕的距离，n 越小，元素越大</strong></p>
+<p><strong>z轴则是物体与屏幕的距离，z轴越大（正值）物体越大</strong></p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  perspective: 200px;</span><br><span class="line">&#125;</span><br><span class="line">div &#123;</span><br><span class="line">  width:200px;</span><br><span class="line">  height:200px;</span><br><span class="line">  background-color:pink;</span><br><span class="line">  transform:translate3d(400px,100px,100px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3D呈现：transform-style</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  perspective: 500px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  margin: 100px auto;</span><br><span class="line">  transition: all 2s;</span><br><span class="line">  /*让子元素保持3d立体空间*/</span><br><span class="line">  transform-style: preserve-3d;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">.box:hover &#123;</span><br><span class="line">  transform: rotateY(60deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box div &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  background-color: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box div:last-child &#123;</span><br><span class="line">  background-color: purple;</span><br><span class="line">  transform: rotateX(60deg);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/07/15/CSS基础/" rel="next" title="CSS基础">
+                <i class="fa fa-chevron-left"></i> CSS基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5"><span class="nav-number">1.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、新的语义-结构元素"><span class="nav-number">1.1.</span> <span class="nav-text">一、新的语义/结构元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、新的表单元素"><span class="nav-number">1.2.</span> <span class="nav-text">二、新的表单元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、input"><span class="nav-number">1.3.</span> <span class="nav-text">三、input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、图象"><span class="nav-number">1.4.</span> <span class="nav-text">四、图象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、多媒体标签"><span class="nav-number">1.5.</span> <span class="nav-text">五、多媒体标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3"><span class="nav-number">2.</span> <span class="nav-text">CSS3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、选择器"><span class="nav-number">2.1.</span> <span class="nav-text">一、选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、2D转换"><span class="nav-number">2.2.</span> <span class="nav-text">二、2D转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、动画"><span class="nav-number">2.3.</span> <span class="nav-text">三、动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、3D转换"><span class="nav-number">2.4.</span> <span class="nav-text">四、3D转换</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
