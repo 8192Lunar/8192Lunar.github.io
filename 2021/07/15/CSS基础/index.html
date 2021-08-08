@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="CSS，指的是Cascading Style Sheet（层叠样式表），是用来控制网页外观的一门技术。 1.引入方式（1）外部样式表     1&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;文件路径&quot; /&amp;gt; 注：@import方式会先加载HTML后加载CSS，而link是先加载CSS后加载HTML （2）内部样式表 123&amp;lt;style">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-07-21T08:53:04.882Z">
+<meta property="og:updated_time" content="2021-08-08T10:21:19.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础">
 <meta name="twitter:description" content="CSS，指的是Cascading Style Sheet（层叠样式表），是用来控制网页外观的一门技术。 1.引入方式（1）外部样式表     1&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;文件路径&quot; /&amp;gt; 注：@import方式会先加载HTML后加载CSS，而link是先加载CSS后加载HTML （2）内部样式表 123&amp;lt;style">
@@ -349,7 +349,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2021-07-21 16:53:04" itemprop="dateModified" datetime="2021-07-21T16:53:04+08:00">2021-07-21</time>
+                <time title="Geändert am: 2021-08-08 18:21:19" itemprop="dateModified" datetime="2021-08-08T18:21:19+08:00">2021-08-08</time>
               
             
           </span>
@@ -1067,19 +1067,19 @@
 <p>对于width和height的要点：</p>
 <p>一、块级元素</p>
 <p>​    width：</p>
-<p>   　　　　1. 可以自己设定具体的数值。　<br>      　　　　2. 不设置时，默认是auto，等于父级元素的宽度（就是自身的margin，border，padding，content都加起来之后等于父级元素的宽度）<br>      　　　　3. 设定 width：100% ，此时是盒子content的宽度等于父级元素的宽度，所以如果设置了margin，border，padding的值的时候，盒子会凸出来</p>
+<p>   　　　　1. 可以自己设定具体的数值。　<br>            　　　　2. 不设置时，默认是auto，等于父级元素的宽度（就是自身的margin，border，padding，content都加起来之后等于父级元素的宽度）<br>            　　　　3. 设定 width：100% ，此时是盒子content的宽度等于父级元素的宽度，所以如果设置了margin，border，padding的值的时候，盒子会凸出来</p>
 <p>​    height：</p>
-<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，但可以改变文字的位置。<br>      　　　　2. 不设置具体值的时候，默认值是0，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）<br>      　　　　3. 由元素内部的文档流的高度之和决定（同上）</p>
+<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，但可以改变文字的位置。<br>            　　　　2. 不设置具体值的时候，默认值是0，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）<br>            　　　　3. 由元素内部的文档流的高度之和决定（同上）</p>
 <p>二、内联元素</p>
 <p>　width：</p>
-<p>   　　　　1. 设定具体的数值是 <strong>不起作用</strong>，具体宽度由文字内容决定<br>      　　　　2. 可以用padding-left 和 padding-right 设定值，改变width大小<br>      　　　　3. margin-left 和 margin-right 设定值，改变不了width大小，但是可以改变元素的位置</p>
+<p>   　　　　1. 设定具体的数值是 <strong>不起作用</strong>，具体宽度由文字内容决定<br>            　　　　2. 可以用padding-left 和 padding-right 设定值，改变width大小<br>            　　　　3. margin-left 和 margin-right 设定值，改变不了width大小，但是可以改变元素的位置</p>
 <p>　height：</p>
-<p>   　　　　1. padding-top和padding-bottom可以设定具体的值，但是已经超出了外在盒子，虽然可以通过background-color观察到，但是却无法撑开元素的位置；margin-top和margin-bottom直接没有效果，所以不要使用<br>      　　　　2. 可以通过font-size来改变其高度的大小，这时就体现出来inline元素是靠内容撑开的特点了<br>      　　　　3. 不能通过设置 line-height  的值来改变height的大小，一定要切记；虽然文字的位置可能改变了，也将父元素的边框撑开了，但是通过background-color可以观察出，其实元素的height没有发生改变</p>
+<p>   　　　　1. padding-top和padding-bottom可以设定具体的值，但是已经超出了外在盒子，虽然可以通过background-color观察到，但是却无法撑开元素的位置；margin-top和margin-bottom直接没有效果，所以不要使用<br>            　　　　2. 可以通过font-size来改变其高度的大小，这时就体现出来inline元素是靠内容撑开的特点了<br>            　　　　3. 不能通过设置 line-height  的值来改变height的大小，一定要切记；虽然文字的位置可能改变了，也将父元素的边框撑开了，但是通过background-color可以观察出，其实元素的height没有发生改变</p>
 <p>三、内联块元素（<strong>inline-block 的元素，既具有 block 元素可以设置宽高的特性，同时又具有 inline 元素默认不换行的特性</strong>）</p>
 <p>　　width：</p>
-<p>   　　　　1. 可以自己设定具体的数值<br>      　　　　2. 不设置具体的数值的时候，靠内容撑开</p>
+<p>   　　　　1. 可以自己设定具体的数值<br>            　　　　2. 不设置具体的数值的时候，靠内容撑开</p>
 <p>　    height：</p>
-<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，可以改变文字的位置<br>      　　　　2. 不设置具体的数值的时候，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）</p>
+<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，可以改变文字的位置<br>            　　　　2. 不设置具体的数值的时候，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）</p>
 
       
     </div>

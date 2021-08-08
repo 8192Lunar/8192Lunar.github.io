@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1. **$ git config --global user.name &amp;quot;Your Name&amp;quot;**    设置名字 2. **$ git config --global user.email &amp;quot;email@example.com&amp;quot;**    设置Email地址 3. **mkdir &amp;quot;name&amp;quot;**    创建一个目录name 4. *">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git基本命令总结">
+<meta property="og:url" content="http://yoursite.com/2021/08/08/git基本命令总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. **$ git config --global user.name &amp;quot;Your Name&amp;quot;**    设置名字 2. **$ git config --global user.email &amp;quot;email@example.com&amp;quot;**    设置Email地址 3. **mkdir &amp;quot;name&amp;quot;**    创建一个目录name 4. *">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-08T10:22:36.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git基本命令总结">
+<meta name="twitter:description" content="1. **$ git config --global user.name &amp;quot;Your Name&amp;quot;**    设置名字 2. **$ git config --global user.email &amp;quot;email@example.com&amp;quot;**    设置Email地址 3. **mkdir &amp;quot;name&amp;quot;**    创建一个目录name 4. *">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2021/08/08/git基本命令总结/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>git基本命令总结 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/08/git基本命令总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git基本命令总结
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2021-08-08 18:22:13 / Geändert am: 18:22:36" itemprop="dateCreated datePublished" datetime="2021-08-08T18:22:13+08:00">2021-08-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>1. **$ git config --global user.name &quot;Your Name&quot;**
+   设置名字
+2. **$ git config --global user.email &quot;email@example.com&quot;**
+   设置Email地址
+3. **mkdir &quot;name&quot;**
+   创建一个目录name
+4. **cd &quot;路径&quot;**
+   变更用户所在目录（后接路径）
+5. **pwd**
+   用于显示当前目录
+6. **git init**
+   初始化命令，把这个目录变成Git可以管理的仓库，并创建一个.git文件夹
+7. **git add  &quot;filename.xxx&quot;**
+   将文件添加到暂存区(staging area)，可反复多次使用，添加多个文件
+       git add -f &quot;filename.xxx&quot;
+       将文件强制添加到暂存区
+8. **git commit**
+   提交已经被add进来的改动，实际上就是把暂存区的所有内容提交到当前分支
+        git commit -m “xxx”（常用）
+       xxx是本次提交的说明，执行成功后会，出现x file changed，y insertions （x指的是被改动的文件个数，y是指插入了y行内容）
+        git commit -a 
+       先把所有已经track的文件的改动add进来,然后提交(有点像svn的一次提交,不用先暂存). 对于没有track的文件,还是需要git add一下.
+       git commit --amend 
+           增补提交. 会使用与当前提交节点相同的父节点进行一次新的提交,旧的提交将会被取消.
+9. **git status**
+   查询仓库的状态
+10. **git diff &quot;filename&quot;**
+         不加参数的git diff（显示未执行更改的差异）:
+                  此命令比较的是工作目录中当前文件和暂存区域快照之间的差异,也就是修改之后还没有暂存起来的变化内容
+              git diff --cached（显示不同阶段的更改）：
+                      看已经暂存起来的文件和上次提交时的快照之间的差异(Git 1.6.1 及更高版本还允许使用 git diff --staged，效果是相同的）
+              git diff HEAD（显示所有阶段的或未声明的更改的差异）：
+                      比较工作目录和上次提交之间所有的改动
+              git diff [version tag]:
+                      看自从某个版本之后都改动了什么(可加上--stat参数来简化输出)
+              git diff  [branchA] [branchB]：
+                      可以用来比较两个分支,但实际上它会返回一个由A到B的patch,不是我们想要的结果
+               git diff [branchA]…[branchB]：
+                       返回两个分支分开以后各自的改动都是什么（实际上它是:git diff $(git merge-base [branchA] [branchB]) [branchB]的结果）
+11. **git log**
+          显示从最近到最远的提交日志（即显示提交历史），每次更新都有一个 SHA-1 校验和、作者的名字 和 电子邮件地址、提交时间，最后缩进一个段落显示提交说明
+          git log -n ：(n是一个正整数)，查看最近n次的提交信息
+          git log commit：查询commit之前的记录，包含commit
+          git log --pretty=online：将 每个提交 放在一行显示，可以显示完整的commit id（版本号）
+          git log --oneline --number： 每条log（日志）只显示一行,显示number条
+          git log --oneline --graph：可以图形化地表示出分支合并历史
+          git log branchname：可以显示特定分支的log
+          git log --oneline branch1 ^ branch2,可以查看在分支1,却不在分支2中的提交（^ 表示排除这个分支(Window下可能要给^branch2加上引号)）
+          git log --decorate：显示出tag信息
+          git log --author=[author name]： 可以指定作者的提交历史
+          git log --since=时间 --before=时间 --until=时间 --after=时间： 根据提交时间筛选log
+              *--since, --after    仅显示指定时间之后的提交
+              --until, --before   仅显示指定时间之前的提交*
+          --mergs ：查看所有合并过的提交历史记录
+          --no-merges ：查看所有未被合并过的提交信息
+          git log --stat：仅显示简要的增改行数统计
+          git log -p：按补丁格式显示每个更新之间的差异
+          git log -S：通过查询文件的变更内容来检索出指定提交日志 （注：-S后没有&quot;=&quot;，与查询内容之间也没有空格符）
+                  例：git log --S*new*、git log -S*methodName*
+          git log --grep：根据commit信息过滤log: git log --grep=keywords
+              *默认情况下, git log --grep --author是 or 的关系,即满足一条即被返回,如果你想让它们是 and 的关系,可以加上--all-match的option*
+          git log –graph –pretty=oneline –addrev-commit：查看分支的合并情况
+12. **git reset**（git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本）
+          撤消更改并提交
+          git reset HEAD：
+                  用来把不小心add进去的文件从staged状态取出来,可以单独针对某一个文件操作: git reset HEAD - - filename, 这个- - 也可以不加
+               git reset –hard HEAD^ 
+                  回退到上一个版本（一个^代表一个版本）（假设要回退一百个版本可以写为HEAD~100）（条件：未把本地版本库推送到远程）
+          git reset –hard xxxx（xxxx指commit id（版本号）的前几位数字）：
+                  指定回到未来的某个版本 
+          git reset HEAD &lt;file&gt;
+                  可以把**暂存区**的修改撤销掉（unstage），重新放回工作区
+13. **git reflog**
+          记录每次命令，可以在这找回版本号（查看命令历史）
+          git reflog是对reflog进行管理的命令，reflog是git用来记录引用变化的一种机制，比如记录分支的变化或者是HEAD引用的变化
+          当git reflog不指定引用的时候，默认列出HEAD的reflog
+          HEAD@{0}代表HEAD当前的值，HEAD@{3}代表HEAD在3次变化之前的值
+          git会将变化记录到HEAD对应的reflog文件中，其路径为.git/logs/HEAD,，分支的reflog文件都放在.git/logs/refs目录下的子目录中
+14. **git checkout**（git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原“）
+          git checkout (branchname)：切换到一个分支
+          git checkout -b (branchname)： 创建并切换到新的分支
+          git checkout -- filename（ -- 很重要，没有 -- ，就变成了“切换到另一个分支”的命令）
+          把文件在**工作区**的修改全部撤销，这里有两种情况：
+                  一种是文件自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+                  一种是文件已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+          总之，就是让这个文件回到最近一次git commit或git add时的状态
+          **注意:git checkout filename会删除该文件中所有没有暂存和提交的改动,这个操作是不可逆的**
+          git checkout -b branch-name1 origin/branch-name2：
+          创建远程origin的branch-name1分支到本地branch-name2分支
+15. **rm  file**
+          删除工作区的文件
+          git rm file（先手动删除文件，然后使用git rm &lt; file &gt;和git add&lt; file &gt;效果是一样的 ）
+          从版本库中删除文件（还需加上git commit file）
+16. **cat file**
+               查看file的内容
+17. **git remote add origin git@server-name:path/repo-name.git**
+          关联一个远程库,例：git remote add origin git@github.com:michaelliao/learngit.git，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库
+18. **git push**：
+          将本地commit的代码更新到远程版本库中,实际上是把当前分支master推送到远程
+          git push -u origin master：
+          第一次推送master分支的所有内容时使用，此后直接使用git push origin master
+          git push [alias] [branch]：
+          将会把当前分支merge到alias上的[branch]分支.如果分支已经存在,将会更新,如果不存在,将会添加这个分支
+          git push origin &lt; tagname &gt;：推送某个标签到远程
+          git push origin --tags：一次性推送全部尚未推送到远程的本地标签
+          git push origin :refs/tags/&lt; tagname &gt;：从远程库删除标签
+          *如果有多个人向同一个remote repo push代码，Git会首先在你试图push的分支上运行git log，检查它的历史中是否能看到server上的branch现在的tip，如果本地历史中不能看到server的tip，说明本地的代码不是最新的，Git会拒绝你的push，让你先fetch，merge，之后再push，这样就保证了所有人的改动都会被考虑进来*
+19. **git clone**
+              获取一个url对应的远程Git repo, 创建一个local copy.
+              一般的格式是git clone [url].
+              clone下来的repo会以url最后一个斜线后面的名称命名,创建一个文件夹,如果想要指定特定的名称,可以git clone [url] newname指定
+              例：git clone git@github.com:michaelliao/gitskills.git（michaelliao是github账户名，gitskills是仓库名，名字不固定）
+20. **git branch**（用来列出分支,创建分支和删除分支）
+          git branch -v：可以看见每一个分支的最后一次提交
+
+    git branch：列出本地所有分支,当前分支会被星号（*）标示出
+     git branch (branchname)： 创建一个新的分支(当你用这种方式创建分支的时候,分支是基于你的上一次提交建立的)
+     git branch -d (branchname)： 删除一个分支
+     git branch -D (branchname)： 强行删除分支
+     删除remote的分支：
+     git push (remote-name) :(branch-name)： 删除远程分支
+     这个是因为完整的命令形式是:
+     git push remote-name local-branch:remote-branch
+     而这里local-branch的部分为空,就意味着删除了remote-branch
+     git branch --set-upstream-to &lt; branch-name &gt; origin/&lt; branch-name &gt;：创建本地branch-name分支与远程origin/branch-name分支的链接关系
+</code></pre><ol start="21">
+<li><p><strong>git merge</strong>（用于合并指定分支到当前分支）</p>
+<pre><code>git merge [alias]/[branch]
+把远程分支merge到当前分支
+*如果出现冲突,需要手动修改,可以用git mergetool，解决冲突的时候可以用到git diff,解决完之后用git add添加,即表示冲突已解决（解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交）*
+Fast forward模式下，删除分支后，会丢掉分支信息，所以要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息，因此使用命令：
+git merge –no-ff -m “merge with no-ff” [branch] ：禁用Fast forward，将分支合并到master分支上
+</code></pre></li>
+<li><p><strong>git stash</strong>（暂存工作现场，即把当前的改动压入一个栈）</p>
+<pre><code>git stash将会把当前目录和index中的所有改动(但不包括未track的文件)压入一个栈,然后留给你一个clean的工作状态,即处于上一次最新提交处
+git stash list：显示这个栈的list
+git stash apply：恢复，即取出stash中的上一个项目(stash@{0}),并且应用于当前的工作目录，也可以指定别的项目,比如git stash apply stash@{1}，*注：但恢复后，stash内容并不删除，还需要用git stash drop来删除*
+git stash pop：恢复的同时把stash内容也删了
+</code></pre></li>
+<li><p><strong>git remote</strong>（列出、添加和删除远程存储库别名）</p>
+<pre><code>因为不需要每次都用完整的url,所以Git为每一个remote repo的url都建立一个别名,然后用git remote来管理这个list
+git remote：查看远程库的信息
+git remote -v：显示更详细的信息，可以看见每一个别名对应的实际url
+git remote add [alias] [url]：添加一个新的remote repo
+git remote rm [alias]:：删除一个存在的remote alias
+git remote rename [old-alias] [new-alias]： 重命名
+git remote set-url [alias] [url]：更新url， 可以加上—push和fetch参数,为同一个别名set不同的存取地址
+</code></pre></li>
+<li><p><strong>git fetch</strong>（从远程存储库下载新的分支和数据）</p>
+<pre><code>git fetch [alias]：取某一个远程repo
+git fetch --all：取到全部repo
+*fetch将会取到所有你本地没有的数据，所有取下来的分支可以被叫做remote branches，它们和本地分支一样(可以看diff、log等，也可以merge到其他分支)，但是Git不允许你checkout到它们*
+</code></pre></li>
+<li><p><strong>git pull</strong>（抓取远程的新提交，然后，在本地合并，即从远程仓库中获取，并尝试合并到当前分支中）</p>
+<pre><code>     pull == fetch + merge FETCH_HEAD
+     git pull会首先执行git fetch，然后执行git merge，把取来的分支的head merge到当前分支，这个merge操作会产生一个新的commit
+如果使用--rebase参数,它会执行git rebase来取代原来的git merge
+</code></pre></li>
+<li><p><strong>git rebase</strong>（把分叉的提交历史“整理”成一条直线，看上去更直观，缺点是本地的分叉提交已经被修改过了）</p>
+<pre><code>--rebase不会产生合并的提交，它会将本地的所有提交临时保存为补丁(patch)，放在”.git/rebase”目录中,然后将当前分支更新到最新的分支尖端，最后把保存的补丁应用到分支上
+rebase的过程中，也许会出现冲突，Git会停止rebase并让你解决冲突，在解决完冲突之后，用git add去更新这些内容，然后无需执行commit，只需要：
+</code></pre><p>git rebase –continue：就会继续打余下的补丁<br>git rebase –abort：将会终止rebase,当前分支将会回到rebase之前的状态</p>
+</li>
+<li><p><strong>git tag</strong>（在一个提交上建立永久性的书签）</p>
+<pre><code>     git tag：查看所有标签
+     git tag &lt; name &gt;：新建&lt; name &gt;标签，默认为HEAD（也可以指定一个commit id）
+     git tag &lt; name &gt;  &lt; commit id &gt;：根据commit id，给一个过去的提交打tag
+     git tag -a &lt; name &gt;： -a参数会允许你添加一些信息,即制作一个带注释的标签，当你运行git tag -a命令的时候，Git会打开一个编辑器让你输入tag信息
+git show &lt; tagname &gt;：查看标签信息
+git tag -a &lt; name &gt; -m   &quot;xxx&quot;   &lt; commit id &gt;：创建带有说明的标签，用-a指定标签名，-m指定说明文字
+*注意：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。*
+git tag -d &lt; name &gt;：删除标签
+</code></pre></li>
+</ol>
+<pre><code>*push的时候是不包含tag的，如果想包含，可以在push时加上--tags参数
+fetch的时候，branch HEAD可以reach的tags是自动被fetch下来的，不能从分支头访问的标记将被跳过，如果想确保所有的tags都被包含进来，需要加上--tags选项*
+</code></pre><ol start="28">
+<li><p><strong>git config –global alias.&lt; 自定义名字 &gt;  &lt;命令&gt;</strong>：配置别名</p>
+<pre><code>--global参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用，如果不加，那只针对当前的仓库起作用
+</code></pre></li>
+<li><p><strong>git revert</strong>（反转撤销提交）</p>
+<pre><code>只要把出错的提交(commit)的名字(reference)作为参数传给命令就可以了
+git revert HEAD: 撤销最近的一个提交
+git revert会创建一个反向的新提交，可以通过参数-n来告诉Git先不要提交  
+</code></pre></li>
+<li><p><strong>git clean</strong>（从工作目录中移除没有track的文件）</p>
+<pre><code>通常的参数是git clean -df:
+-d表示同时移除目录，-f表示force，因为在git的配置文件中， clean.requireForce=true，如果不加-f，clean将会拒绝执行.
+</code></pre></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/08/08/JS进阶学习/" rel="next" title="JS进阶学习">
+                <i class="fa fa-chevron-left"></i> JS进阶学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/08/08/JAVA开发环境搭建/" rel="prev" title="JAVA开发环境搭建">
+                JAVA开发环境搭建 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
