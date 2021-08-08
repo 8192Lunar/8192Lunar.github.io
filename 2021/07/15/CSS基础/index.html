@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="CSS，指的是Cascading Style Sheet（层叠样式表），是用来控制网页外观的一门技术。 1.引入方式（1）外部样式表     1&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;文件路径&quot; /&amp;gt; 注：@import方式会先加载HTML后加载CSS，而link是先加载CSS后加载HTML （2）内部样式表 123&amp;lt;style">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-07-15T07:15:40.774Z">
+<meta property="og:updated_time" content="2021-07-21T08:53:04.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础">
 <meta name="twitter:description" content="CSS，指的是Cascading Style Sheet（层叠样式表），是用来控制网页外观的一门技术。 1.引入方式（1）外部样式表     1&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;文件路径&quot; /&amp;gt; 注：@import方式会先加载HTML后加载CSS，而link是先加载CSS后加载HTML （2）内部样式表 123&amp;lt;style">
@@ -192,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -220,7 +220,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -237,7 +237,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
 
@@ -325,19 +325,31 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2021-07-15 13:20:48 / Modified: 15:15:40" itemprop="dateCreated datePublished" datetime="2021-07-15T13:20:48+08:00">2021-07-15</time>
+              <time title="Erstellt: 2021-07-15 13:20:48" itemprop="dateCreated datePublished" datetime="2021-07-15T13:20:48+08:00">2021-07-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2021-07-21 16:53:04" itemprop="dateModified" datetime="2021-07-21T16:53:04+08:00">2021-07-21</time>
               
             
           </span>
@@ -1040,7 +1052,7 @@
 <h3 id="13-定位布局"><a href="#13-定位布局" class="headerlink" title="13.定位布局"></a>13.定位布局</h3><p>（1）固定定位：fixed（脱离文档流，相对于的是屏幕，就是那些浮动的广告那样，怎么拉都固定在同一个位置，而 absolute 元素离开屏幕就看不见了）</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">fixed</span>;</span><br><span class="line"><span class="selector-tag">top</span>: 像素值;</span><br><span class="line"><span class="selector-tag">bottom</span>: 像素值;</span><br><span class="line"><span class="selector-tag">left</span>: 像素值;</span><br><span class="line"><span class="selector-tag">right</span>: 像素值;</span><br></pre></td></tr></table></figure>
 <p>所谓的固定定位，指的是被固定的元素不会随着滚动条的拖动而改变位置。</p>
-<p><strong>注意，这4个方向属性的值的参考对象是浏览器的4条边，即相对于浏览器而言。</strong></p>
+<p><strong>注意，这4个方向属性的值的参考对象是浏览器的4条边，即相对于浏览器而言。固定定位必须有宽高</strong></p>
 <p>（2） 相对定位：relative（根据元素本身原来所应该处的位置偏移，不会改变布局的计算）</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line"><span class="selector-tag">top</span>: 像素值;</span><br><span class="line"><span class="selector-tag">bottom</span>: 像素值;</span><br><span class="line"><span class="selector-tag">left</span>: 像素值;</span><br><span class="line"><span class="selector-tag">right</span>: 像素值;</span><br></pre></td></tr></table></figure>
 <p>所谓的相对定位，指的是该元素的位置是相对于它的原始位置计算而来的。</p>
@@ -1055,19 +1067,19 @@
 <p>对于width和height的要点：</p>
 <p>一、块级元素</p>
 <p>​    width：</p>
-<p>   　　　　1. 可以自己设定具体的数值。　<br>   　　　　2. 不设置时，默认是auto，等于父级元素的宽度（就是自身的margin，border，padding，content都加起来之后等于父级元素的宽度）<br>   　　　　3. 设定 width：100% ，此时是盒子content的宽度等于父级元素的宽度，所以如果设置了margin，border，padding的值的时候，盒子会凸出来</p>
+<p>   　　　　1. 可以自己设定具体的数值。　<br>      　　　　2. 不设置时，默认是auto，等于父级元素的宽度（就是自身的margin，border，padding，content都加起来之后等于父级元素的宽度）<br>      　　　　3. 设定 width：100% ，此时是盒子content的宽度等于父级元素的宽度，所以如果设置了margin，border，padding的值的时候，盒子会凸出来</p>
 <p>​    height：</p>
-<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，但可以改变文字的位置。<br>   　　　　2. 不设置具体值的时候，默认值是0，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）<br>   　　　　3. 由元素内部的文档流的高度之和决定（同上）</p>
+<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，但可以改变文字的位置。<br>      　　　　2. 不设置具体值的时候，默认值是0，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）<br>      　　　　3. 由元素内部的文档流的高度之和决定（同上）</p>
 <p>二、内联元素</p>
 <p>　width：</p>
-<p>   　　　　1. 设定具体的数值是 <strong>不起作用</strong>，具体宽度由文字内容决定<br>   　　　　2. 可以用padding-left 和 padding-right 设定值，改变width大小<br>   　　　　3. margin-left 和 margin-right 设定值，改变不了width大小，但是可以改变元素的位置</p>
+<p>   　　　　1. 设定具体的数值是 <strong>不起作用</strong>，具体宽度由文字内容决定<br>      　　　　2. 可以用padding-left 和 padding-right 设定值，改变width大小<br>      　　　　3. margin-left 和 margin-right 设定值，改变不了width大小，但是可以改变元素的位置</p>
 <p>　height：</p>
-<p>   　　　　1. padding-top和padding-bottom可以设定具体的值，但是已经超出了外在盒子，虽然可以通过background-color观察到，但是却无法撑开元素的位置；margin-top和margin-bottom直接没有效果，所以不要使用<br>   　　　　2. 可以通过font-size来改变其高度的大小，这时就体现出来inline元素是靠内容撑开的特点了<br>   　　　　3. 不能通过设置 line-height  的值来改变height的大小，一定要切记；虽然文字的位置可能改变了，也将父元素的边框撑开了，但是通过background-color可以观察出，其实元素的height没有发生改变</p>
+<p>   　　　　1. padding-top和padding-bottom可以设定具体的值，但是已经超出了外在盒子，虽然可以通过background-color观察到，但是却无法撑开元素的位置；margin-top和margin-bottom直接没有效果，所以不要使用<br>      　　　　2. 可以通过font-size来改变其高度的大小，这时就体现出来inline元素是靠内容撑开的特点了<br>      　　　　3. 不能通过设置 line-height  的值来改变height的大小，一定要切记；虽然文字的位置可能改变了，也将父元素的边框撑开了，但是通过background-color可以观察出，其实元素的height没有发生改变</p>
 <p>三、内联块元素（<strong>inline-block 的元素，既具有 block 元素可以设置宽高的特性，同时又具有 inline 元素默认不换行的特性</strong>）</p>
 <p>　　width：</p>
-<p>   　　　　1. 可以自己设定具体的数值<br>   　　　　2. 不设置具体的数值的时候，靠内容撑开</p>
+<p>   　　　　1. 可以自己设定具体的数值<br>      　　　　2. 不设置具体的数值的时候，靠内容撑开</p>
 <p>　    height：</p>
-<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，可以改变文字的位置<br>   　　　　2. 不设置具体的数值的时候，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）</p>
+<p>   　　　　1. 可以自己设定具体的数值，但是要注意：<strong>设定了具体的height之后</strong>，<strong>使用 line-height 不能撑开盒子</strong>，可以改变文字的位置<br>      　　　　2. 不设置具体的数值的时候，靠内容撑开 （例如：设定line-height: 50px 来撑开盒子的 height ）</p>
 
       
     </div>
@@ -1156,10 +1168,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -1179,8 +1191,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -1254,7 +1266,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -1262,7 +1274,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
